@@ -12,20 +12,20 @@ public class movemaze : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey("w")){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(0,-10);
-			heroObj.transform.eulerAngles = new Vector3 (0,0,0);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(0,-20);
+			heroObj.transform.eulerAngles = new Vector3 (0,0,90);
 		} else{
 			if (Input.GetKey("s")){
-				GetComponent<Rigidbody2D>().velocity = new Vector2(0,10);
-				heroObj.transform.eulerAngles = new Vector3 (0,0,180);
+				GetComponent<Rigidbody2D>().velocity = new Vector2(0,20);
+				heroObj.transform.eulerAngles = new Vector3 (0,0,-90);
 			} else {
 				if (Input.GetKey("a")){
-					GetComponent<Rigidbody2D>().velocity = new Vector2(10,0);
-					heroObj.transform.eulerAngles = new Vector3 (0,0,90);
+					GetComponent<Rigidbody2D>().velocity = new Vector2(20,0);
+					heroObj.transform.eulerAngles = new Vector3 (0,180,0);
 				} else {
 					if (Input.GetKey("d")){
-						GetComponent<Rigidbody2D>().velocity = new Vector2(-10,0);
-						heroObj.transform.eulerAngles = new Vector3 (0,0,-90);
+						GetComponent<Rigidbody2D>().velocity = new Vector2(-20,0);
+						heroObj.transform.eulerAngles = new Vector3 (0,0,0);
 					}
 					else{
 						GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
